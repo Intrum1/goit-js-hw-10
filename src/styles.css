@@ -1,0 +1,72 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif; 
+    margin: 0; 
+    padding: 0; 
+    background-color: #f0f0f0; 
+    color: #333; 
+  }
+
+  
+.container {
+    max-width: 1200px; /* Задайте максимальну ширину контейнера */
+    margin: 0 auto; /* Вирівняйте контейнер по центру горизонталі */
+    padding: 20px; /* Додайте внутрішній відступ для контенту */
+    background-color: #fff; /* Задайте колір фону контейнера */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Додайте тінь для контейнера */
+  }
+
+  .breed-select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+
+  .loader {
+    display: none; 
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    color: #007bff; 
+  }
+
+  .error {
+    display: none; 
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+    color: #ff0000; 
+  }
+
+  .cat-info {
+    display: none; 
+    text-align: center;
+    padding: 20px;
+    font-size: 18px;
+  }
+
+  .cat-info img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 20px;
+  }
+
+  .loader {
+    transform: rotateZ(45deg);
+    perspective: 1000px;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    color: #fff;
+  }
+    
