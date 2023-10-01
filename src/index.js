@@ -7,7 +7,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const catInfo = document.querySelector('.cat-info');
 
 function breedMap() {
-  const options = breeds.map(breed => {
+  
+
+  fetchBreeds()
+    .then(breeds => {
+      const options = breeds.map(breed => {
         const option = document.createElement('option');
         option.value = breed.id;
         option.text = breed.name;
@@ -15,10 +19,6 @@ function breedMap() {
       });
       breedSelect.append(...options);
 };
-
-  fetchBreeds()
-    .then(breeds => {
-      breedMap();
     })
     .catch(() => {
       error.classList.add('show');
