@@ -6,15 +6,19 @@ document.addEventListener('DOMContentLoaded', () => {
   const error = document.querySelector('.error');
   const catInfo = document.querySelector('.cat-info');
 
-  fetchBreeds()
-    .then(breeds => {
-        const options = breeds.map(breed => {
+function breedMap() {
+  const options = breeds.map(breed => {
         const option = document.createElement('option');
         option.value = breed.id;
         option.text = breed.name;
         return option;
       });
       breedSelect.append(...options);
+};
+
+  fetchBreeds()
+    .then(breeds => {
+      breedMap();
     })
     .catch(() => {
       error.classList.add('show');
